@@ -564,7 +564,7 @@ main{
     }
     @media screen and (max-width: 900px){
     .rooms-images>div p{
-      font-size:medium;
+      font-size:medium; 
     }}
     
   @media screen and (min-width: 900px){
@@ -595,11 +595,11 @@ FOOTER=========
     padding-top: 3rem;
   }
   .footer-center{
-    display: flex;
+    /* display: flex;
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem; */
   }
   .footer-icons{
     display: flex;
