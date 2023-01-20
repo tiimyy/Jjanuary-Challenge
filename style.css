@@ -15,6 +15,56 @@
  
 }
 
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
 li{
     list-style-type: none;
 }
@@ -24,10 +74,7 @@ a{
 .header-content h1{
 font-family: 'Inter';
 font-style: normal;
-font-weight: 700;
-font-size: 52px;
-line-height: 70px;
-letter-spacing: -1px;
+color: var(--clr--white);
 text-transform: capitalize;
 }
 @media screen and (min-width:900px) {
@@ -70,6 +117,7 @@ img:not(.nav-logo):not(.icon-img){
  
   .map-img{
     height:340px;
+    width: inherit;
   }
 /*}*/ .search{
     font-family: 'Poppins';
@@ -78,12 +126,13 @@ img:not(.nav-logo):not(.icon-img){
     font-size: 14px;
     line-height: 28px;
     background: var(--clr--white);
-    padding: 1rem;
+    padding:1rem;
     display: grid;
-    justify-content: center;
-    width: 375px;
+    width: inherit;
     margin: 0 auto;
     border-radius: 10px;
+    margin-left:1.25rem ;
+    margin-right: 1.25rem ;
    justify-self:center ;
 }
 
@@ -99,7 +148,8 @@ th{
 .map-table{
     background: var(--clr--white);
     border-collapse: collapse;
-    width:300px;
+    display: inline-table;
+    width:100%;
     padding: 2rem;
     padding-bottom: 0;
     height: 50px;
@@ -286,8 +336,15 @@ nav{
     box-shadow: 0px 12px 19px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
   }
+ 
   .ad-icons .icon-img:hover{
     transform: scale(1.2);
+  }
+  @media screen and (max-width:900px){
+ .ad-icons li p{
+    font-size: small;
+    max-width: 6rem;
+  }
   }
   @media screen and (min-width:900px) {
     .advert-center{
@@ -302,7 +359,9 @@ nav{
 /* 
 properties section
  */
-
+main{
+  background-color: #F9F9F9;
+}
  .section-title {
   margin-bottom: 4rem;
   text-transform: capitalize;
@@ -393,11 +452,8 @@ properties section
   }
   .property-info h2{
       font-family: 'DM Sans';
-  font-style: normal;
+
   font-weight: 700;
-  font-size: 25.552px;
-  line-height: 33px;
-  letter-spacing: -0.642075px;
   text-transform: capitalize;
   color:var(--clr--primary-color);
   }
@@ -479,12 +535,14 @@ properties section
   .rooms-images>img{
     padding-bottom: 2rem;
   }
+  .rooms-images>div p{
+    text-transform: capitalize;
+  }
+
   .room-content{
     padding-bottom: 2rem;
   }
-  .room-content h1,.room-content p{
-    padding-bottom: 1rem;
-  }
+ 
  
     .rooms-images{
       display: grid;
@@ -504,6 +562,10 @@ properties section
     .container-four{
       align-self: start;
     }
+    @media screen and (max-width: 900px){
+    .rooms-images>div p{
+      font-size:medium;
+    }}
     
   @media screen and (min-width: 900px){
     .rooms-section{
@@ -513,6 +575,7 @@ properties section
     align-items: center;
     gap:2rem
     }
+    
   }
   /* 
   
@@ -581,7 +644,7 @@ FOOTER=========
     margin-top: 1rem;
     height: 2.5px;
     width: 80vw;
-    background-color: #c47171;
+    background-color: #E6E6E6;
   }
 /* formssss*/
 .form-section{
@@ -652,6 +715,10 @@ select,option,input,label{
     grid-template-columns: auto auto auto;
     justify-content: space-between; 
   } 
+  .form{
+    padding: 2rem;
+    box-shadow: var(--dark-shadow);
+  }
  }
  #freeform{
   width: 100%;
