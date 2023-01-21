@@ -3,6 +3,16 @@ const propertyBtn = document.querySelector(".property-btn");
 const tabs = document.querySelectorAll(".property-tab");
 const tabContent = document.querySelectorAll(".featured-center");
 const featured = document.querySelector("#featured");
+
+
+// ********** nav toggle ************
+// select button and links
+const navBtn = document.getElementById("nav-toggle");
+const links = document.getElementById("nav-links");
+// add event listener
+navBtn.addEventListener("click", () => {
+  links.classList.toggle("show-links");
+});
 // TABBED COMPONENT
 propertyBtn.addEventListener("click", function (e) {
   e.preventDefault();
