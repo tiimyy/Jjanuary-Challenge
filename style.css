@@ -98,9 +98,9 @@ text-transform: capitalize;
     background: linear-gradient(210.44deg, rgba(66, 64, 64, 0.45) 6.41%,rgba(51, 85, 101, 0.991)22.5%, rgba(0, 0, 0, 0.51) 57.16%);
 } 
 .section{
-    width: 80vw;
-    max-width: 1170px;
-    margin: 0 auto;
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
 }
 .animate{
   transition:var(--transition);
