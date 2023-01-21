@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+body{overflow-x: hidden;}
 :root{
   --clr--primary-color:#F4511E;
   --clr--white:#f1f1f1;
