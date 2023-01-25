@@ -8,10 +8,11 @@ body{overflow-x: hidden;}
   --clr--primary-color:#F4511E;
   --clr--white:#f1f1f1;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --spacing: 0.15rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --darker-shadow: 0 5px 15px rgba(0, 0, 0, 0.425);
  
 }
 
@@ -98,7 +99,7 @@ text-transform: capitalize;
     background: linear-gradient(210.44deg, rgba(66, 64, 64, 0.45) 6.41%,rgba(51, 85, 101, 0.991)22.5%, rgba(0, 0, 0, 0.51) 57.16%);
 } 
 .section{
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
   max-width: 1170px;
 }
@@ -164,6 +165,8 @@ Navbar
 */
 nav{
   margin:0 auto;
+  box-shadow: var(--darker-shadow);
+  background: rgba(93, 107, 122, 0.466);
 }
 
 .navbar {
@@ -175,12 +178,12 @@ nav{
     z-index: 1;
   }
   .navbar::before{
-    content: '';
-  height:.5px;
+  content: '';
+  height:1px; 
   width: 100%;
   position: absolute;
   background:rgba(88, 84, 84, 0.642);
-  bottom:3px;
+  bottom:-2px;
   }
  
   .nav-icons {
@@ -202,7 +205,7 @@ nav{
     background: transparent;
     border: transparent;
     font-size: 1.5rem;
-    color: var(--clr-primary-5);
+    color: var(--clr--white);
     cursor: pointer;
     transition: var(--transition);
   }
@@ -250,7 +253,7 @@ nav{
   width: 100%;
 }
   .show-links {
-    height: 280px;
+    height: 240px;
   }
   @media screen and (min-width: 992px) {
     /* hide toggle button */
@@ -341,6 +344,10 @@ nav{
   .ad-icons .icon-img:hover{
     transform: scale(1.2);
   }
+  .ad-icons li p{
+    font-weight: bold;
+    text-transform: capitalize;
+  }
   @media screen and (max-width:900px){
  .ad-icons li p{
     font-size: small;
@@ -354,7 +361,9 @@ nav{
         align-items: center ;
     }
    
- 
+    .ad-icons li p{
+      max-width: 9rem;
+    }
   }
 
 /* 
@@ -427,21 +436,30 @@ main{
     flex-wrap: wrap;
   }
   .property-title p,
-  .property-title h3 {
+  .property-title h4{
     margin-bottom: 0.75rem;
     line-height: 1.25;
+    font-family: 'Inter';
 
   }
-  .property-title h3{
+  /* .property-title h{
       font-family: 'DM Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 23px;
   line-height: 30px;
   letter-spacing: -0.642075px;
   text-transform: capitalize;
+  } */
+  
+  .property-info p{
+   font-family: 'DM Sans';
+  font-weight: 700;
+  text-transform: capitalize;
+  color:var(--clr--primary-color);
+  font-size: 18px;
   }
-  .property-title p {
+
+ .property-title p {
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
@@ -450,26 +468,6 @@ main{
     letter-spacing: -0.642075px;
     text-transform: capitalize;
     color:#818181;
-  }
-  .property-info h2{
-      font-family: 'DM Sans';
-
-  font-weight: 700;
-  text-transform: capitalize;
-  color:var(--clr--primary-color);
-  }
-  .property-footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .property-footer p {
-    line-height: 0;
-    margin-bottom: 0;
-    text-transform: capitalize;
-    color: var(--clr-primary-5);
   }
   .property-btn {
     text-align: center;
@@ -517,8 +515,9 @@ main{
   }
   
   .next {
-    background-color: var(--clr--white);
-    color:var(--clr--primary-color);
+    background-color: var(--clr--primary-color);
+    color:var(--clr--white);
+    text-transform: capitalize;
   }
   .carousel{
     margin: 0 auto;
@@ -543,7 +542,9 @@ main{
   .room-content{
     padding-bottom: 2rem;
   }
- 
+  .room-content h3{
+    padding-top: 1rem;
+  }
  
     .rooms-images{
       display: grid;

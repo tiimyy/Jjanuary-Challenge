@@ -16,8 +16,13 @@ navBtn.addEventListener("click", () => {
 // TABBED COMPONENT
 propertyBtn.addEventListener("click", function (e) {
   e.preventDefault();
+
   const clicked = e.target.closest(".property-tab");
+console.log(clicked)
+
+ 
   if (!clicked) return;
+  console.log('tab')
   tabs.forEach((t) => {
     t.classList.remove("property-tab-active");
     t.style.transition = "ease-in .2s";
@@ -26,10 +31,43 @@ propertyBtn.addEventListener("click", function (e) {
   clicked.classList.add("property-tab-active");
   tabContent.forEach((c) => c.classList.remove("active"));
 
+console.log(clicked.dataset.tab)
   document
     .querySelector(`.featured-center-${clicked.dataset.tab}`)
     .classList.add("active");
+
 });
+let x=1;
+document.querySelector(".nextt").addEventListener('click',function(){
+  
+  if(x<3&&x>=1){
+    x++
+  tabContent.forEach((c) => c.classList.remove("active"))
+   document
+   .querySelector(`.featured-center-${x}`).classList.add("active");
+   console.log(x)
+   console.log('done') }
+   else{
+    console.log(x)
+   }
+    
+})
+
+  
+//   if(x>1)
+//   {x--;
+//   tabContent.forEach((c) => c.classList.remove("active"))
+//    document
+//    .querySelector(`.featured-center-${x}`).classList.add("active");
+//    console.log(x)
+//     }
+//     else{
+//       console.log(x)
+//      }
+    
+// })
+   
+     
 
 //REVEAL SECTION ON SCROLL
 const Allsections = document.querySelectorAll(".animate");
