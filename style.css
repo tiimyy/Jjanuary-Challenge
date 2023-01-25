@@ -240,7 +240,7 @@ nav{
  .nav-links li{
   position: relative;
  }
- .nav-links li::after{
+ /* .nav-links li::after{
   content: '';
   height:3px;
   width: 0;
@@ -248,7 +248,7 @@ nav{
   bottom: -13px;
   background: var(--clr--white);
   transition: var(--transition);
- }
+ } */
  .nav-links li:hover::after{
   width: 100%;
 }
