@@ -81,9 +81,7 @@ color: var(--clr--white);
   height: 300px;
 
 }
-.search{
- 
-}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -158,7 +156,7 @@ img:not(.nav-logo):not(.icon-img){
     height:340px;
     width: inherit;
   }
-.
+
 th{
   border-collapse: collapse;
   /* border-top:1px solid rgba(0, 0, 0, 0.2);
